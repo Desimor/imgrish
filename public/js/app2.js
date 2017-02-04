@@ -1,5 +1,5 @@
 var imgrishApp = {
-    imgurl: [],
+    imgurls: [],
     init: function(){
         imgrishApp.cacheDOM();
         imgrishApp.addEventListeners();
@@ -14,10 +14,10 @@ var imgrishApp = {
         imgrishApp.createButton.addEventListener('click', imgrishApp.addImg);
     },
     render: function (){
-        imgrishApp.list.innerHTML = imgrishApp.imgurl.map(url => `<li><img src="${url}"></li>`).join{''};
+        imgrishApp.list.innerHTML = imgrishApp.imgurls.map(url => `<li><img src="${url}"></li>`).join('');
     },
     addImg: function(){
-        imgrishApp.imgurl.push (imgrishApp.picture.value);
+        imgrishApp.imgurls.push (imgrishApp.picture.value);
         imgrishApp.render();
     }
 };
